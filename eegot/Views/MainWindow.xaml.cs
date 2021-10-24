@@ -16,7 +16,12 @@ namespace eegot
             this.DataContext = vm = new MainWindowViewModel();
 
             _frame = _mainFrame;
-            _frame.Navigate(new Views.Dashboard());
+            _frame.Navigate(new Views.Emotive());
+        }
+
+        private void MenuItem_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
