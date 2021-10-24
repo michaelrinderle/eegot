@@ -1,0 +1,36 @@
+﻿<Window x:Class="eegot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eegot"
+        mc:Ignorable="d"
+        Height="600" Width="800"
+        Title="{Binding Path=Content.Title, ElementName=_mainFrame}">
+    <Window.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Top Menu -->
+            <DockPanel Grid.Row="0">
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem x:Name="MainMenu" Header="File" >
+                        <MenuItem Header="_Import" Command="{Binding ImportCommand}"/>
+                        <MenuItem Header="_Quit" Command="{Binding QuitApplicationCommand}"/>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
+
+            <Grid Grid.Row="1">
+                <!-- Frame Content -->
+                <Frame x:Name="_mainFrame" />
+            </Grid>
+        </Grid>
+    </Window.Content>
+</Window>
