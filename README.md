@@ -1,5 +1,5 @@
 # EEGot
-EEG data analyizer
+EEG data analyzer
 
 Under Construction!
 
