@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eegot"
         mc:Ignorable="d"
-        Height="600" Width="800"
+        Height="500" Width="800"
         Title="{Binding Path=Content.Title, ElementName=_mainFrame}">
     <Window.Content>
         <Grid>
@@ -23,6 +23,9 @@
                     <MenuItem x:Name="MainMenu" Header="File" >
                         <MenuItem Header="_Import" Command="{Binding ImportCommand}"/>
                         <MenuItem Header="_Quit" Command="{Binding QuitApplicationCommand}"/>
+                    </MenuItem>
+                    <MenuItem x:Name="PlatformMenu" Header="Platform">
+                        <MenuItem Header="_Emotive" IsCheckable="True" IsChecked="True" Checked="MenuItem_Checked"/>
                     </MenuItem>
                 </Menu>
             </DockPanel>
